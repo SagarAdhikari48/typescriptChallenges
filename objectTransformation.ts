@@ -13,7 +13,7 @@ const users = [
   { name: "Sagar", age: 25, lastName: "Adhikari" },
   { name: "Rahul", age: 30, lastName: "Gautam" },
   { name: "Priya", age: 28, lastName: "Nepal" },
-  { name: "John", age: 25, lastName: "Poudel" },
+  { name: "Sagar", age: 25, lastName: "Poudel" },
 ];
 
 console.log(getUserNames(users));
