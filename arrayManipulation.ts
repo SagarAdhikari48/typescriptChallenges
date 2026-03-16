@@ -120,6 +120,25 @@ function getAndRemoveDuplicate(arr: any[]) {
 }
 console.log(
   "getAndRemoveDuplicate: ",
-  getAndRemoveDuplicate([1, 2, 2, 3, 4, 4, 5,5]),
+  getAndRemoveDuplicate([1, 2, 2, 3, 4, 4, 5, 5]),
 );
 
+// 8. Multiply each element in the array by a given number.
+function multiplyEachElementofArray(arr: number[], factor: number) {
+  return arr.map((n) => n * factor);
+}
+console.log(
+  "multiplyEachElementofArray: ",
+  multiplyEachElementofArray([1, 2, 2, 3, 4, 4, 5, 5], 2),
+);
+
+function arrayToString(arr: string[]) {
+  return arr.join(",");
+}
+console.log("arrayToString: ", arrayToString(["a", "b", "c", "d", "e"]));
+
+function filterEvenNumbers(arr: number[]): number[] {
+  return arr.filter((num) => num % 2 === 0);
+}
+
+console.log("filterEvenNumbers: ", filterEvenNumbers([1, 2, 2, 3, 4, 4, 5, 5]));
