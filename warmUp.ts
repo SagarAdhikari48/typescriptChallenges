@@ -157,4 +157,18 @@ console.log(
   convertArrayToObject([{ id: "5", Sagar: "adk" }]),
 );
 
+// 11) Find longest string
+function findLongestStringInArray(str: string[]) {
+  let longestStr = "";
+  for (const string of str) {
+    if (string.length > longestStr.length) {
+      longestStr = string;
+    }
+  }
+  return longestStr;
+}
 
+console.log(
+  "findLongestStringInArray",
+  findLongestStringInArray(["sagar", "Apple", "Environment"]),
+);
