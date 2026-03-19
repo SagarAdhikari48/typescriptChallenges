@@ -121,10 +121,10 @@ function convertStringToCharCountObj(str: string): Record<string, number> {
   return result;
 }
 
-console.log(
-  "convertStringToCharCountObj: ",
-  convertStringToCharCountObj("THisisacharcoundtest"),
-);
+// console.log(
+//   "convertStringToCharCountObj: ",
+//   convertStringToCharCountObj("THisisacharcoundtest"),
+// );
 
 // 9) Sum only even numbers
 function sumOfEvenNumbers(arr: number[]) {
@@ -137,4 +137,24 @@ function sumOfEvenNumbers(arr: number[]) {
   return sum;
 }
 
-console.log("sumOfEvenNumbers: ",sumOfEvenNumbers([2,4,6,5,7,8,0]));
+console.log("sumOfEvenNumbers: ", sumOfEvenNumbers([2, 4, 6, 5, 7, 8, 0]));
+
+// 10) Convert array → object (id as key)
+type Item = {
+  id: string | number;
+  [key: string]: any;
+};
+function convertArrayToObject(arr: Item[]) {
+  const result: Record<string, Item> = {};
+  for (const item of arr) {
+    result[String(item.id)] = item;
+  }
+  return result;
+}
+
+console.log(
+  "convertArrayToObject: ",
+  convertArrayToObject([{ id: "5", Sagar: "adk" }]),
+);
+
+
