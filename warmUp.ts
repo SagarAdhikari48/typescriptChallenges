@@ -172,3 +172,28 @@ console.log(
   "findLongestStringInArray",
   findLongestStringInArray(["sagar", "Apple", "Environment"]),
 );
+
+// 12) Check palindrome
+// 123=321, "madam" = "madam"
+function checkPalindrome(str: string) {
+  const reverse = str.split("").reverse().join("");
+  return reverse == str;
+}
+
+console.log("checkPalindrome: ", checkPalindrome("teacher"));
+
+// 13) Flatten 1 level array
+
+function flattenOneLevel<T>(arr: (T | T[])[]): T[] {
+  const result: T[] = [];
+  for (const item of arr) {
+    if (Array.isArray(item)) {
+      result.push(...item);
+    } else {
+      result.push(item);
+    }
+  }
+  return result;
+}
+
+console.log("flattenOneLevel: ", flattenOneLevel([1, 2, 4, [3, 4, [1, 2, 3]]]));
