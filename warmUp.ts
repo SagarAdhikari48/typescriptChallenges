@@ -263,3 +263,23 @@ console.log(
   "findMissingItemsInArray : ",
   findMissingItemsInArray([1, 2, 3, 4, 5, 6, 8, 9]),
 );
+
+// 19) Swap first and last element
+
+function swapFirstAndLastElement(arr: number[] | []) {
+  if (arr.length < 2) {
+    return [...arr];
+  }
+
+  var result: number[] | undefined = [...arr];
+  var first: number | undefined = result[0];
+
+  result[0] = result[result.length - 1]!;
+  result[result.length - 1] = first!;
+  return result;
+}
+
+console.log(
+  "swapFirstAndLastElement : ",
+  swapFirstAndLastElement([1, 2, 3, 4, 5]),
+);
