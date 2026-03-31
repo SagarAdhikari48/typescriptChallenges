@@ -207,4 +207,22 @@ function rotateArray<T>(array: (T | T[])[]): (T | T[])[] {
   return [array[array.length - 1]!, ...array.slice(0, array.length - 1)];
 }
 
-console.log("rotateArray:    ",rotateArray([1,2,3,4,5]));
+console.log("rotateArray:    ", rotateArray([1, 2, 3, 4, 5]));
+
+// 15) Remove specific value
+function removeElementFromArray(arr: number[], val: number) {
+  return arr.filter((ele) => ele !== val);
+}
+console.log(
+  "removeElementFromArray : ",
+  removeElementFromArray([1, 2, 3, 4, 5], 4),
+);
+
+// 16) Get unique values
+function getUniqueArray(arr: number[]) {
+  return [...new Set(arr)];
+}
+console.log(
+  "getUniqueArray: ",
+  getUniqueArray([1, 2, 3, 4, 4, 5, 6, 5, 7, 8, 7, 6]),
+);
