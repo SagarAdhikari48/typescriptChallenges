@@ -226,3 +226,17 @@ console.log(
   "getUniqueArray: ",
   getUniqueArray([1, 2, 3, 4, 4, 5, 6, 5, 7, 8, 7, 6]),
 );
+
+// 17) Count occurrences
+// [1,2,3,4,4,5,4,5,6,2,3]
+function countOccuranceInArray(values: string[]): Record<string, number> {
+  return values.reduce(
+    (acc, value) => {
+      acc[value] = (acc[value] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
+}
+
+console.log("countOccuranceInArray : ",countOccuranceInArray(["Apple", "Banana", "Grapes", "Apple", "Banana","Apple"]))
