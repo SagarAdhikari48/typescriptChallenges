@@ -239,4 +239,27 @@ function countOccuranceInArray(values: string[]): Record<string, number> {
   );
 }
 
-console.log("countOccuranceInArray : ",countOccuranceInArray(["Apple", "Banana", "Grapes", "Apple", "Banana","Apple"]))
+console.log(
+  "countOccuranceInArray : ",
+  countOccuranceInArray([
+    "Apple",
+    "Banana",
+    "Grapes",
+    "Apple",
+    "Banana",
+    "Apple",
+  ]),
+);
+
+// 18) Find missing number (simple)
+
+function findMissingItemsInArray(arr: number[]): number {
+  const n = arr.length + 1;
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = arr.reduce((sum, number) => sum + number, 0);
+  return expectedSum - actualSum;
+}
+console.log(
+  "findMissingItemsInArray : ",
+  findMissingItemsInArray([1, 2, 3, 4, 5, 6, 8, 9]),
+);
