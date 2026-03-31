@@ -197,3 +197,14 @@ function flattenOneLevel<T>(arr: (T | T[])[]): T[] {
 }
 
 console.log("flattenOneLevel: ", flattenOneLevel([1, 2, 4, [3, 4, [1, 2, 3]]]));
+
+// 14) Rotate array right
+// [1,2,3,4,5] -> [5, 1, 2, 3, 4]
+function rotateArray<T>(array: (T | T[])[]): (T | T[])[] {
+  if (array.length === 0) {
+    return [];
+  }
+  return [array[array.length - 1]!, ...array.slice(0, array.length - 1)];
+}
+
+console.log("rotateArray:    ",rotateArray([1,2,3,4,5]));
