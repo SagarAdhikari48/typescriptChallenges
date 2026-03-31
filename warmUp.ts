@@ -283,3 +283,13 @@ console.log(
   "swapFirstAndLastElement : ",
   swapFirstAndLastElement([1, 2, 3, 4, 5]),
 );
+
+// function 20) Sort descending
+function sortItemsInDescendingOrder(arr: number[]) {
+  return arr.sort((a, b) => b - a);
+}
+
+console.log(
+  "sortItemsInDescendingOrder : ",
+  sortItemsInDescendingOrder([1, 2, 3, 4, 5, 6]),
+);
