@@ -71,4 +71,37 @@ function countWordsInSentence(sentence: string): Record<string, number> {
   );
 }
 
-console.log("countWordsInSentence", countWordsInSentence("THhis is my typescript open challanges"))
+console.log(
+  "countWordsInSentence",
+  countWordsInSentence("THhis is my typescript open challanges"),
+);
+
+// 24. Find duplicates
+function findDuplicates<T>(arr: T[]): T[] {
+  return arr.filter((item, index) => arr.indexOf(item) !== index);
+}
+
+console.log("findDuplicates : ", findDuplicates([1, 2, 3, 4, 5, 3, 4, 5, 6]));
+
+// 25. Remove duplicates by property
+// Problem: Remove objects that share the same ID.
+
+const duplicateUsers = [
+  { id: 1, name: "Sagar" },
+  { id: 2, name: "Ram" },
+  { id: 1, name: "Sagar Duplicate" },
+  { id: 3, name: "Hari" },
+  { id: 2, name: "Ram Duplicate" },
+];
+function removeDuplicateObjects<T extends { id: any }>(arr: T[]): T[] {
+  // const seen = new Set();
+  // return arr.filter((item) => (seen.has(item.id) ? false : seen.add(item.id)));
+  const map = new Map(arr.map((item) => [item.id, item]));
+  console.log("map: ", map);
+
+  return Array.from(map.values());
+}
+console.log(
+  "removeDuplicateObjects : ",
+  removeDuplicateObjects(duplicateUsers),
+);
