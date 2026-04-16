@@ -105,3 +105,10 @@ console.log(
   "removeDuplicateObjects : ",
   removeDuplicateObjects(duplicateUsers),
 );
+
+// remove duplicate 2
+
+function removeDUplicate<T extends { id: any }>(arr: T[]): Map<["id"], T> {
+  return new Map(arr.map((item) => [item.id, item]));
+}
+console.log("removeDUplicate: ", removeDUplicate(duplicateUsers));
