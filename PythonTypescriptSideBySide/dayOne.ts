@@ -55,5 +55,13 @@ function checkPalindrome(text: string): string {
   }
 }
 
-console.log(checkPalindrome("Sagar"))
-console.log(checkPalindrome("madam"))
+// console.log(checkPalindrome("Sagar"))
+// console.log(checkPalindrome("madam"))
+
+// ORED
+function isPalindrome(text: string): boolean {
+  return text == text.split("").reverse().join("");
+}
+
+console.log(isPalindrome("This is palindrome test using simple way"));
+console.log(isPalindrome("121"));
