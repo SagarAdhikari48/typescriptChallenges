@@ -63,5 +63,23 @@ function isPalindrome(text: string): boolean {
   return text == text.split("").reverse().join("");
 }
 
-console.log(isPalindrome("This is palindrome test using simple way"));
-console.log(isPalindrome("121"));
+// console.log(isPalindrome("This is palindrome test using simple way"));
+// console.log(isPalindrome("121"));
+
+// # Challenge #5: Count Vowels - OpenAI
+// # Count the number of vowels in a string.
+
+function countVowelsInText(text: string): number {
+  let count = 0;
+  let vowels = "aeiou";
+
+  for (const char of text.toLocaleLowerCase()) {
+    if (vowels.includes(char)) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+console.log(countVowelsInText("This is how i learn typescript"));
+console.log(countVowelsInText("openAI"))
