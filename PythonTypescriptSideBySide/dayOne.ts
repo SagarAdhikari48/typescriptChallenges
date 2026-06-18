@@ -28,6 +28,8 @@ function findLargestNumberInArray(numbers: number[]): number | undefined {
 //   findLargestNumberInArray([1, 3, 6, 9, 40, 36]),
 // );
 
+
+// 3 .Reverse a string without using built-in reverse functions.
 function findReverseOfString(text: string): string {
   let reversedText = "";
   for (var char of text) {
