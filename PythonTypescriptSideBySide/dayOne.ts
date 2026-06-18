@@ -28,7 +28,6 @@ function findLargestNumberInArray(numbers: number[]): number | undefined {
 //   findLargestNumberInArray([1, 3, 6, 9, 40, 36]),
 // );
 
-
 // 3 .Reverse a string without using built-in reverse functions.
 function findReverseOfString(text: string): string {
   let reversedText = "";
@@ -38,4 +37,23 @@ function findReverseOfString(text: string): string {
   return reversedText;
 }
 
-console.log(findReverseOfString("This is my home"))
+// console.log(findReverseOfString("This is my home"));
+
+// # Challenge #4: Check Palindrome
+// # Determine whether a string reads the same forwards and backwards.
+
+function checkPalindrome(text: string): string {
+  let reversedText = "";
+  for (var char of text) {
+    reversedText = char + reversedText;
+  }
+
+  if (reversedText == text) {
+    return `${text} is palindrome`;
+  } else {
+    return `${text} is not pallindrome`;
+  }
+}
+
+console.log(checkPalindrome("Sagar"))
+console.log(checkPalindrome("madam"))
