@@ -57,17 +57,28 @@ function removeDuplicatUsingLoop(arr: number[]) {
   const result: number[] = [];
   for (let i = 0; i < arr.length; i++) {
     let existDuplicate = false;
-    for(let j = 0; j < result.length; j++){
-        if(result[j] == arr[i]){
-            existDuplicate = true;
-            break;
-        }
+    for (let j = 0; j < result.length; j++) {
+      if (result[j] == arr[i]) {
+        existDuplicate = true;
+        break;
+      }
     }
-    if(!existDuplicate){
-        result.push(arr[i]!)
+    if (!existDuplicate) {
+      result.push(arr[i]!);
     }
   }
   return result;
 }
 
-console.log(removeDuplicatUsingLoop([1, 2, 2, 3, 4, 4, 5]));
+// console.log(removeDuplicatUsingLoop([1, 2, 2, 3, 4, 4, 5]));
+
+// Challenge #10: Find Second Largest Number
+// [10, 50, 30, 90, 80]
+
+function findSecondLargestElement(arr: number[]): number {
+  const uniqueItems = [...new Set(arr)];
+  const sortedItems = uniqueItems.sort((a, b) => a - b);
+  console.log("sorted elements : ", sortedItems);
+  return sortedItems[sortedItems.length - 2]!;
+}
+console.log("Second largest: ",findSecondLargestElement([10, 50, 30, 90, 80]));
