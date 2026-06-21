@@ -24,7 +24,23 @@ function findAverageOfArray(arr: number[]) {
   return average;
 }
 
-console.log(
-  "avarage of the number is : ",
-  findAverageOfArray([10, 20, 30, 40, 50]),
-);
+// console.log(
+//   "avarage of the number is : ",
+//   findAverageOfArray([10, 20, 30, 40, 50]),
+// );
+
+// Challenge #8: Count Occurrences of a Character
+// # hello
+// # l - 2
+
+function calculateCharInString(text: string, targetChar: string) {
+  let count = 0;
+  for (const char of text) {
+    if (char == targetChar) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+console.log("count occurance or char : ", calculateCharInString("hello", "l"));
