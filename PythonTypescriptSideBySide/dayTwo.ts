@@ -45,11 +45,29 @@ function calculateCharInString(text: string, targetChar: string) {
 
 // console.log("count occurance or char : ", calculateCharInString("hello", "l"));
 
-
 // Challenge #9: Remove Duplicates from Array
 // [1, 2, 2, 3, 4, 4, 5]
-function remove_duplicates(numbers: number[]){
-    return[... new Set(numbers)];
+function remove_duplicates(numbers: number[]) {
+  return [...new Set(numbers)];
 }
 
-console.log("Removed duplicates : ", remove_duplicates([1, 2, 2, 3, 4, 4, 5]))
+// console.log("Removed duplicates : ", remove_duplicates([1, 2, 2, 3, 4, 4, 5]))
+
+function removeDuplicatUsingLoop(arr: number[]) {
+  const result: number[] = [];
+  for (let i = 0; i < arr.length; i++) {
+    let existDuplicate = false;
+    for(let j = 0; j < result.length; j++){
+        if(result[j] == arr[i]){
+            existDuplicate = true;
+            break;
+        }
+    }
+    if(!existDuplicate){
+        result.push(arr[i]!)
+    }
+  }
+  return result;
+}
+
+console.log(removeDuplicatUsingLoop([1, 2, 2, 3, 4, 4, 5]));
