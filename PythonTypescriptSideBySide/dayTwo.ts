@@ -81,4 +81,26 @@ function findSecondLargestElement(arr: number[]): number {
   console.log("sorted elements : ", sortedItems);
   return sortedItems[sortedItems.length - 2]!;
 }
-console.log("Second largest: ",findSecondLargestElement([10, 50, 30, 90, 80]));
+// console.log("Second largest: ", findSecondLargestElement([10, 50, 30, 90, 80]));
+
+// ORED
+function findSecondLargest(arr: number[]): number | null {
+    // If you're looking for the second largest, both variables should start at negative infinity:
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i]!;
+    if (num > largest) {
+      secondLargest = largest;
+      largest = num;
+    } else if (num > secondLargest && num != largest) {
+      secondLargest = num;
+    }
+  }
+  if (secondLargest === -Infinity) {
+    return null;
+  }
+  return secondLargest;
+}
+console.log("findSecondLargest : ", findSecondLargest([20, 30, 15, 87,98]))
