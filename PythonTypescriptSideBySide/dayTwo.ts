@@ -43,4 +43,13 @@ function calculateCharInString(text: string, targetChar: string) {
   return count;
 }
 
-console.log("count occurance or char : ", calculateCharInString("hello", "l"));
+// console.log("count occurance or char : ", calculateCharInString("hello", "l"));
+
+
+// Challenge #9: Remove Duplicates from Array
+// [1, 2, 2, 3, 4, 4, 5]
+function remove_duplicates(numbers: number[]){
+    return[... new Set(numbers)];
+}
+
+console.log("Removed duplicates : ", remove_duplicates([1, 2, 2, 3, 4, 4, 5]))
